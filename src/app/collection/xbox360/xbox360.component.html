@@ -1,0 +1,23 @@
+<app-header></app-header>
+<p id="xbox-title">Checkons un peu la collection XBOX 360 !!!!</p>
+<br />
+<p>Recherchons un Jeu !</p>
+<input
+  [(ngModel)]="jeux"
+  (keyup.enter)="searchingGame()"
+  type="text"
+  placeholder="Mass Effect"
+/>
+<span id="result-search"></span>
+<ul>
+  <li
+    *ngFor="let game of xbox360List | filter : jeux"
+    (click)="checkedGame(game)"
+  >
+    {{ game }}
+  </li>
+</ul>
+<ng-container *ngIf="showAddButton">
+  <button (click)="addGame()">yes</button>
+  <button (click)="noAddGame()">no</button>
+</ng-container>

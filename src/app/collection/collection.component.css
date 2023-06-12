@@ -1,0 +1,121 @@
+.collection-choice {
+    width: 100%;
+    height: 94vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.first {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, #5EB144, white);
+    animation: gradient 1s ease-out forwards;
+}
+
+
+.first img {
+    align-self: center;
+}
+
+.second {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, #0E750D, white);
+    animation: second-gradient 1s ease-out forwards;
+}
+
+.second img {
+    align-self: center;
+}
+
+.third {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, #2E494E, white);
+    animation: gradient 1s ease-out forwards;
+}
+
+.third img {
+    align-self: center;
+}
+
+.quatrieme {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, #D90013, white);
+    animation: second-gradient 1s ease-out forwards;
+}
+
+.quatrieme img {
+    align-self: center;
+}
+
+
+.cinquieme {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, #03A9F4, white);
+    animation: gradient 1s ease-out forwards;
+}
+
+.cinquieme img {
+    align-self: center;
+}
+
+.sixieme {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, #008ECB, white);
+    animation: second-gradient 1s ease-out forwards;
+}
+
+.sixieme img {
+    align-self: center;
+}
+
+.septieme {
+    height: 100%;
+    display: flex;
+    background: linear-gradient(to bottom, black, white);
+    animation: gradient 1s ease-out forwards;
+}
+
+.septieme img {
+    align-self: center;
+}
+
+@keyframes gradient {
+    0% {
+        transform: translateY(+100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes second-gradient {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+p {
+    align-items: center;
+}
+
+.collection-choice img {
+    cursor: pointer;
+}

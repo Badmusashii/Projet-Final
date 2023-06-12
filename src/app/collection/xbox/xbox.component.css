@@ -1,0 +1,20 @@
+* {
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+li {
+    list-style: none;
+}
+
+#xbox-title {
+    text-align: center;
+    background: rgb(14, 119, 14);
+    background: radial-gradient(circle, rgba(14, 119, 14, 1) 24%, rgba(241, 237, 235, 1) 86%);
+}

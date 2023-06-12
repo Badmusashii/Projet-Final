@@ -1,0 +1,18 @@
+<app-header></app-header>
+<p id="xbox-title">Checkons un peu la collection XBOX !!!!</p>
+<br />
+<p>Recherchons un Jeu !</p>
+<input
+  [(ngModel)]="jeux"
+  (keyup.enter)="searchingGame()"
+  type="text"
+  placeholder="Halo 5"
+/><br />
+<ul>
+  <li *ngFor="let game of xboxList | filter : jeux">{{ game }}</li>
+</ul>
+<span id="result-search"></span>
+<ng-container *ngIf="showAddButton">
+  <button (click)="addGame()">yes</button>
+  <button (click)="noAddGame()">no</button>
+</ng-container>

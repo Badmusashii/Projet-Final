@@ -1,0 +1,12 @@
+<app-header></app-header>
+<p id="wiiU-title">Checkons un peu la collection Wii U !!!!</p>
+<p>Recherchons un Jeu !</p>
+<input [(ngModel)]="jeux" (keyup.enter)="searchingGame()" type="text" />
+<ul>
+  <li *ngFor="let game of wiiuList | filter : jeux">{{ game }}</li>
+</ul>
+<span id="result-search"></span>
+<ng-container *ngIf="showAddButton">
+  <button (click)="addGame()">yes</button>
+  <button (click)="noAddGame()">no</button>
+</ng-container>

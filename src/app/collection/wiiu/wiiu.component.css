@@ -1,0 +1,20 @@
+* {
+    text-align: center;
+}
+
+#wiiU-title {
+    text-align: center;
+    background: rgb(3, 160, 232);
+    background: radial-gradient(circle, rgba(3, 160, 232, 1) 24%, rgba(241, 237, 235, 1) 86%);
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+li {
+    list-style: none;
+}

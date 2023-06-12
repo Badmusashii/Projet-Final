@@ -1,0 +1,10 @@
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(189, 188, 188);
+}
+
+p {
+    cursor: pointer;
+}

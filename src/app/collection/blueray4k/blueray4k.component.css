@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+}
+
+#blueray-title {
+    text-align: center;
+    background: rgb(0, 141, 202);
+    background: radial-gradient(circle, rgba(0, 141, 202, 1) 24%, rgba(241, 237, 235, 1) 86%);
+
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+li {
+    list-style: none;
+}

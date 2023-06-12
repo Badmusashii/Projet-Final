@@ -1,0 +1,12 @@
+<app-header></app-header>
+<p id="blueray-title">Checkons un peu la collection BLUE-RAY !!!!</p>
+<p>Recherchons un Film !</p>
+<input [(ngModel)]="movie" (keyup.enter)="searchingMovie()" type="text" />
+<ul>
+  <li *ngFor="let film of bluerayList | filter : movie">{{ film }}</li>
+</ul>
+<span id="result-search"></span>
+<ng-container *ngIf="showAddButton">
+  <button (click)="addMovie()">yes</button>
+  <button (click)="noAddMovie()">no</button>
+</ng-container>

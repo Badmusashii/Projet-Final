@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.xbox-active {
+    background: #0E750D;
+}
+
+.psp-active {
+    background: #AEAEB7;
+}
+
+.switch-active {
+    background: #D90013;
+}
+
+.wiiu-active {
+    background: #03A0E8;
+}
+
+.blueray-active {
+    background: #008DCA;
+}

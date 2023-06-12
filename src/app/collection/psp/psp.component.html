@@ -1,0 +1,18 @@
+<app-header></app-header>
+<p id="psp-title">Checkons un peu la collection PSP !!!!</p>
+<p>Recherchons un Jeu !</p>
+<input
+  [(ngModel)]="jeux"
+  (keyup.enter)="searchingGame()"
+  type="text"
+  placeholder="Final Fantasy"
+/>
+<span id="result-serach"></span>
+<ul>
+  <li *ngFor="let game of pspList | filter : jeux">{{ game }}</li>
+</ul>
+<span id="result-search"></span>
+<ng-container *ngIf="showAddButton">
+  <button (click)="addGame()">yes</button>
+  <button (click)="noAddGame()">no</button>
+</ng-container>
