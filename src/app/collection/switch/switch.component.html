@@ -3,7 +3,12 @@
 <p>Recherchons un Jeu !</p>
 <input [(ngModel)]="jeux" (keyup.enter)="searchingGame()" type="text" />
 <ul>
-  <li *ngFor="let game of switchList | filter : jeux">{{ game }}</li>
+  <li
+    *ngFor="let game of switchList | filter : jeux"
+    (click)="checkedGameOnline(game)"
+  >
+    {{ game }}
+  </li>
 </ul>
 <span id="result-search"></span>
 <ng-container *ngIf="showAddButton">

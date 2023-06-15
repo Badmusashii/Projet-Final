@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,7 @@ export class SearchService {
 
   constructor(private http: HttpClient) {}
 
-  searchGame(jeux: string) {
+  searchGameOnline(jeux: string) {
     const url: string = `https://www.giantbomb.com/api/search/?api_key=ff0f7bc832f02c51f88fd2286162f40173be0d19&format=json&query=${jeux}&ressources=game`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -36,5 +36,8 @@ export class SearchService {
         console.log(data);
         this.loading = false;
       });
+    return this.http.get(
+      `https://www.giantbomb.com/api/search/?api_key=ff0f7bc832f02c51f88fd2286162f40173be0d19&format=json&query=${jeux}&ressources=game`
+    );
   }
 }

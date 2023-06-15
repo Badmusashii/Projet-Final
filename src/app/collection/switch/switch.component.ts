@@ -4,6 +4,7 @@ import { SwitchServiceService } from 'src/app/service/list/switch-service.servic
 import { SearchGameService } from 'src/app/service/search-game.service';
 import { ToUpperCasePipe } from 'src/app/service/to-upper-case.pipe';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
+import { SearchService } from 'src/app/service/search.service';
 
 @Component({
   selector: 'app-switch',
@@ -21,7 +22,8 @@ export class SwitchComponent implements OnInit, OnDestroy {
     public list: SwitchServiceService,
     private upperCase: ToUpperCasePipe,
     private searchGame: SearchGameService,
-    private storage: LocalStorageService
+    private storage: LocalStorageService,
+    private searchGameOnline: SearchService
   ) {}
   ngOnInit(): void {
     document.body.classList.add('switch-active');
@@ -46,6 +48,14 @@ export class SwitchComponent implements OnInit, OnDestroy {
       span.innerText = '';
     }
   }
+
+  checkedGameOnline(value: string) {
+    console.log(value);
+    this.searchGameOnline.searchGameOnline(value).subscribe((data) => {
+      console.log(data);
+    });
+  }
+
   ngOnDestroy(): void {
     document.body.classList.remove('switch-active');
     this.storage.saveData('switch', this.storage.getData('switch')!);
