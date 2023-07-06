@@ -23,6 +23,7 @@ import { FilterPipe } from './service/filter.pipe';
 import { SearchGameService } from './service/search-game.service';
 import { Blueray4kComponent } from './collection/blueray4k/blueray4k.component';
 import { Xbox360Component } from './collection/xbox360/xbox360.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { Xbox360Component } from './collection/xbox360/xbox360.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    DragDropModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     MatIconModule,

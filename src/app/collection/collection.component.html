@@ -3,9 +3,14 @@
     <p>Choix de la collection</p>
 
 </div> -->
-<div class="collection-choice">
+<div
+  id="collection-div"
+  class="collection-choice"
+  cdkDropList
+  (cdkDropListDropped)="onDrop($event)"
+>
   <!-- <p (click)="goTo360()">Xbox 360 / Xbox</p> -->
-  <div class="first">
+  <div class="first" cdkDrag>
     <img
       (click)="goTo360()"
       src="../../assets/img/360 2.png"
@@ -13,7 +18,7 @@
     />
   </div>
   <!-- <p (click)="goToXbox()">Xbox one / Series</p> -->
-  <div class="second">
+  <div class="second" cdkDrag>
     <img
       (click)="goToXbox()"
       src="../../assets/img/xboxseries 2.png"
@@ -21,7 +26,7 @@
     />
   </div>
   <!-- <p (click)="goToPsp()">Psp</p> -->
-  <div class="third">
+  <div class="third" cdkDrag>
     <img
       (click)="goToPsp()"
       src="../../assets/img/psp 1.png"
@@ -29,7 +34,7 @@
     />
   </div>
   <!-- <p (click)="goToSwitch()">Switch</p> -->
-  <div class="quatrieme">
+  <div class="quatrieme" cdkDrag>
     <img
       (click)="goToSwitch()"
       src="../../assets/img/switch 2.png"
@@ -37,7 +42,7 @@
     />
   </div>
   <!-- <p (click)="goToWiiU()">Wii U</p> -->
-  <div class="cinquieme">
+  <div class="cinquieme" cdkDrag>
     <img
       (click)="goToWiiU()"
       src="../../assets/img/wiiu 2.png"
@@ -45,7 +50,7 @@
     />
   </div>
   <!-- <p (click)="goToBlueRay()">Blue-ray</p> -->
-  <div class="sixieme">
+  <div class="sixieme" cdkDrag>
     <img
       (click)="goToBlueRay()"
       src="../../assets/img/blueray 1.png"
@@ -53,7 +58,7 @@
     />
   </div>
   <!-- <p (click)="goTo4k()">4K</p> -->
-  <div class="septieme">
+  <div class="septieme" cdkDrag>
     <img
       (click)="goTo4k()"
       src="../../assets/img/4k 2.png"
