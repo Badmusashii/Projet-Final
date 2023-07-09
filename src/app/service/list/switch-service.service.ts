@@ -135,6 +135,7 @@ export class SwitchServiceService {
       'lost sphear',
       'pocky & rocky reshrined',
       'puzzle bobble everybubble !ng start',
+      'pokemon epee',
     ];
   }
 }
